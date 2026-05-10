@@ -1,0 +1,30 @@
+plugins {
+    id 'java'
+    // id 'com.google.protobuf' version '0.9.4'
+    id 'application'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.java-websocket:Java-WebSocket:1.5.7'
+    implementation 'com.google.code.gson:gson:2.11.0'
+    implementation 'com.google.protobuf:protobuf-java:4.29.5'
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = [
+                'src/main/java', 
+                '../source/JavaClient' // Correct root
+            ]
+        }
+    }
+}
+
+application {
+    mainClass = 'com.bridge.Main'
+}

@@ -1,0 +1,51 @@
+# --- IBKR Official Code ---
+# Ignore the official samples to save space
+samples/
+
+# Ignore unused client libraries from the official SDK
+source/cppclient/
+source/proto/
+source/pythonclient/
+source/ProtoBuf_readme.txt
+
+# Ignore binary jars provided by IBKR (we build from source)
+source/JavaClient/*.jar
+source/JavaClient/jars/
+
+# --- Build & Runtime ---
+.gradle/
+**/build/
+**/node_modules/
+dist/
+.next/
+out/
+
+# --- Java / Compilation ---
+*.class
+*.log
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Ensure we keep the gradle wrapper
+!gradle/wrapper/gradle-wrapper.jar
+
+# --- IDEs / OS ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.iml
+*.iws
+.project
+.settings/
+.classpath
+.factorypath
+
+# --- Secrets & Logs ---
+.env
+npm-debug.log
+yarn-error.log
